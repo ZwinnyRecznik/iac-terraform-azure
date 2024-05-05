@@ -13,6 +13,11 @@ variable "drugafunkcja" {
   default = "location"
 }
 
+variable "funkcjaresource" {
+  type    = string
+  default = "lokacja3"
+}
+
 variable "linuxfunkcjatestapki" {
   type    = string
   default = "location"
@@ -23,9 +28,31 @@ variable "przyklad_service_plan" {
   default = "location"
 }
 
-
-variable "przykladfunkcji" {
+variable "example-linux-function-app" {
   type    = string
   default = "location"
 }
+
+variable "azure-functions-test-rg" {
+  type    = string
+  default = "location"
+}
+
+variable "functionsapptestsa" {
+  type    = string
+  default = "location"
+}
+
+variable "azure-functions-test-service-plan" {
+  type    = string
+  default = "location"
+}
+
+variable "test-azure-functions" {
+  type    = string
+  default = "przykladfunkcji"
+}
+
+
+
 
