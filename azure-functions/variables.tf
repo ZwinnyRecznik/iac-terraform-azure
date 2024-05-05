@@ -1,23 +1,26 @@
 variable "komendadruga" {
   type    = string
-  default = "us-west-1a"
+  default = "location"
 }
 
-
+variable "pierwszafunkcja" {
+  type    = string
+  default = "location"
+}
 
 variable "linuxfunkcjatestapki" {
   type    = string
-  default = "us-west-1a"
+  default = "location"
 }
 
 variable "przyklad_service_plan" {
   type    = string
-  default = "us-west-1a"
+  default = "location"
 }
 
 
 variable "przykladfunkcji" {
   type    = string
-  default = "us-west-1a"
+  default = "location"
 }
 
