@@ -1,4 +1,4 @@
 variable "komendadruga" {
-  type    = list(string)
+  type    = string
   default = ["us-west-1a"]
 }
