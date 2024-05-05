@@ -5,7 +5,7 @@ resource "azurerm_resource_group" "example" {
 
 resource "azurerm_resource_group" "example" {
   name     = "example-resources"
-  location = "West Europe"
+  location = var.location
 }
 
 resource "azurerm_storage_account" "example" {
@@ -37,7 +37,7 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "example" {
   name     = "example-resources"
-  location = "West Europe"
+  location = var.location
 }
 
 resource "azurerm_storage_account" "example" {
@@ -75,7 +75,7 @@ resource "azurerm_linux_function_app" "example" {
 
 resource "azurerm_resource_group" "example" {
   name     = "azure-functions-test-rg"
-  location = "West Europe"
+  location = var.location
 }
 
 resource "azurerm_storage_account" "example" {
