@@ -9,7 +9,7 @@ resource "azurerm_resource_group" "example" {
 }
 
 resource "azurerm_storage_account" "example" {
-  name                     = "komendadruga"
+  name                     = var.komendadruga
   resource_group_name      = azurerm_resource_group.example.name
   location                 = azurerm_resource_group.example.location
   account_tier             = "Standard"
@@ -36,12 +36,12 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "example" {
-  name     = "example-resources"
-  location = var.location
+  name     = var.funkcjaresource
+  location = var.lokacja3
 }
 
 resource "azurerm_storage_account" "example" {
-  name                     = "linuxfunkcjatestapki"
+  name                     = var.linuxfunkcjatestapki
   resource_group_name      = azurerm_resource_group.example.name
   location                 = azurerm_resource_group.example.location
   account_tier             = "Standard"
@@ -49,7 +49,7 @@ resource "azurerm_storage_account" "example" {
 }
 
 resource "azurerm_service_plan" "example" {
-  name                = "przyklad_service_plan"
+  name                = var.przyklad_service_plan
   resource_group_name = azurerm_resource_group.example.name
   location            = azurerm_resource_group.example.location
   os_type             = "Linux"
@@ -59,7 +59,7 @@ resource "azurerm_service_plan" "example" {
 
 
 resource "azurerm_linux_function_app" "example" {
-  name                = "example-linux-function-app"
+  name                = var.example-linux-function-app
   resource_group_name = azurerm_resource_group.example.name
   location            = azurerm_resource_group.example.location
 
@@ -74,12 +74,12 @@ resource "azurerm_linux_function_app" "example" {
 
 
 resource "azurerm_resource_group" "example" {
-  name     = "azure-functions-test-rg"
+  name     = var.azure-functions-test-rg
   location = var.location
 }
 
 resource "azurerm_storage_account" "example" {
-  name                     = "functionsapptestsa"
+  name                     = var.functionsapptestsa
   resource_group_name      = azurerm_resource_group.example.name
   location                 = azurerm_resource_group.example.location
   account_tier             = "Standard"
@@ -87,7 +87,7 @@ resource "azurerm_storage_account" "example" {
 }
 
 resource "azurerm_app_service_plan" "example" {
-  name                = "azure-functions-test-service-plan"
+  name                = var.azure-functions-test-service-plan
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
 
@@ -98,7 +98,7 @@ resource "azurerm_app_service_plan" "example" {
 }
 
 resource "azurerm_function_app" "przykladfunkcji" {
-  name                       = "test-azure-functions"
+  name                       = var.test-azure-functions
   location                   = azurerm_resource_group.przykladfunkcji.location
   resource_group_name        = azurerm_resource_group.przykladfunkcji.name
   app_service_plan_id        = azurerm_app_service_plan.przykladfunkcji.id
