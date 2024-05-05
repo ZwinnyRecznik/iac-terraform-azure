@@ -1,6 +1,6 @@
 resource "azurerm_resource_group" "example" {
-  name     = "example"
-  location = "West Europe"
+  name     = var.pierwszafunkcja
+  location = var.location
 }
 
 resource "azurerm_resource_group" "example" {
