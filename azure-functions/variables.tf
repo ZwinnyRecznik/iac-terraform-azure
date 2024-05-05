@@ -8,6 +8,11 @@ variable "pierwszafunkcja" {
   default = "location"
 }
 
+variable "drugafunkcja" {
+  type    = string
+  default = "location"
+}
+
 variable "linuxfunkcjatestapki" {
   type    = string
   default = "location"
