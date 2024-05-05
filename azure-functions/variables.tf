@@ -50,9 +50,12 @@ variable "azure-functions-test-service-plan" {
 
 variable "test-azure-functions" {
   type    = string
-  default = "przykladfunkcji"
+  default = "location"
 }
 
 
-
+variable "id_for_app" {
+  type    = string
+  default = "przykladfunkcji"
+}
 
